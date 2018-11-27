@@ -1,14 +1,14 @@
 """
 Flask app to host my sample BIO
 """
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     "My BIO home"
-    return "Shiva"
+    return render_template("index.html")
 
 
 #------Start of the scritp
